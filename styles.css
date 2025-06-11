@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.top {
+  height: 100vh;
+}
+.title {
+  text-align: center;
+  line-height: 100vh;
+}
+@media screen and (min-width:481px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+/* ブロック共通初期設定 */
+.scroll-block {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto 400px;
+  line-height: 500px;
+  text-align: center;
+  background-color: lightcoral;
+}
+/* ----------パターン1：透明度が変化---------- */
+/* 画面外 */
+.fade-block1 {
+  opacity: .1;
+  transition: all 1.5s;
+}
+/* 画面に入った時の動き */
+.fade-block1.blockIn {
+  opacity: 1;
+}
+/* ----------パターン2：下からふわっと---------- */
+/* 画面外 */
+.fade-block2 {
+  transform: translateY(100px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block2.blockIn {
+  transform: translateY(0);
+}
+/* ----------パターン3：右からふわっと---------- */
+/* 画面外 */
+.fade-block3 {
+  transform: translateX(200px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block3.blockIn {
+  transform: translateX(0);
+}
+/* ----------パターン4：左からふわっと---------- */
+/* 画面外 */
+.fade-block4 {
+  transform: translateX(-200px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block4.blockIn {
+  transform: translateX(0);
+}
+/* ----------パターン5：斜め下からふわっと---------- */
+/* 画面外 */
+.fade-block5 {
+  transform: translate(150px, 150px);
+  transition: all .5s ease-in;
+}
+/* 画面に入った時の動き */
+.fade-block5.blockIn {
+  transform: translate(0);
+}
+/* ----------パターン6：画面外に飛んでいく---------- */
+/* 画面外 */
+.fade-block6 {
+  transform: translate(-100vw);
+  transition: all 3s ease;
+}
+/* 画面に入った時の動き */
+.fade-block6.blockIn {
+  transform: translate(100vw);
+}
