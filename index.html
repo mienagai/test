@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>ダイブログ｜スクロールフェードインデモ</title>
   </head>
   <body>
@@ -18,9 +18,7 @@
     <div class="scroll-block fade-block4">要素4</div>
     <div class="scroll-block fade-block5">要素5</div>
     <div class="scroll-block fade-block6">要素6</div>
-    <script src="script.js">
-    
-    $(function() {
+    <script src="script.js">$(function() {
       // ↓windowがスクロールされた時に実行する処理
       $(window).scroll(function() {
         // ↓複数のオブジェクトに対して繰り返し処理を行う
@@ -38,13 +36,13 @@
           }
         });
       });
-    });
-    
-    </script>
+    });</script>
   </body>
 </html>
 
-<style>* {
+<style>
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -130,4 +128,7 @@
 /* 画面に入った時の動き */
 .fade-block6.blockIn {
   transform: translate(100vw);
-}</style>
+}
+
+
+</style>
